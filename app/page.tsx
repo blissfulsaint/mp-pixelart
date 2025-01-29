@@ -1,5 +1,6 @@
 'use client';
 import { useRef, useEffect, useState } from "react";
+import { LayoutBand } from "blisskit-ui";
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -48,6 +49,8 @@ export default function Home() {
   }, [isDrawing]);
 
   return (
-    <canvas className="border border-solid border-white" ref={canvasRef} width={200} height={200} />
+    <LayoutBand>
+      <canvas className="border border-solid border-white" ref={canvasRef} width={200} height={200} />
+    </LayoutBand>
   );
 }
